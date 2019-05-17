@@ -1,0 +1,43 @@
+Bank-Dataset-Report
+
+This folder contains:
+
+ban.py : It contains the main code
+
+bank.csv : data
+
+images : Result Obtained : 
+	Accuracy : Accuracies of all techniques
+	coeff : beta coeficient vs features graph
+	PR_curve : Precision vs Recall curve in Linear Regression
+	ROC2 : ROC curve for linear regression
+
+
+
+Data Wrangling and Processing
+
+The process includes Category Indexing, One-Hot Encoding and VectorAssembler.
+It indexes each categorical column using the StringIndexer, then converts the 
+indexed categories into one-hot encoded variables. The resulting output has the 
+binary vectors appended to the end of each row. We use the StringIndexer again to 
+encode our labels to label indices. Next, we use the VectorAssembler to combine all 
+the feature columns into a single vector column.
+
+Pipeline
+
+We use Pipeline to chain multiple Transformers and Estimators together to specify 
+our machine learning workflow. A Pipeline’s stages are specified as an ordered array.
+
+
+Performance : 
+
+Linear Regression
+Accuracy : 0.7666512059369188
+
+Decision Tree
+Accuracy : 0.7601770253555967
+
+It is found that linear regression technique has better accuracy. It can further be 
+improved by training it on bigger dataset.
+
+Best Performance : 76.66 % 
